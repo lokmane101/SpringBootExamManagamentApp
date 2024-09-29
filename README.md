@@ -7,11 +7,11 @@ A spring boot application for exams, profs and subject management
 
 ## App login UI 
 
-![image](src/screenshots/screen1.png)
+![image](src/screenshots/screen.png)
 
 
 ## Connect and Collaborate
 
-Feel free to connect and collaborate on [LinkedIn](https://www.linkedin.com/in/mohamed-afkir-1bbb9729a)<br>
-or contact me via [email](mailto:mohamedafkir078@gmail.com)
+Feel free to connect and collaborate on [LinkedIn](https://linkedin.com/in/lokmane-akkouh)<br>
+or contact me via [email](mailto:lokmaneakkouh10@gmail.com)
 
