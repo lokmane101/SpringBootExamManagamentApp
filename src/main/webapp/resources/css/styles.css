@@ -1,0 +1,777 @@
+/* Gradient background animation */
+body {
+    background: linear-gradient(-45deg, #0081CF, #00A4DE, #00C2D0, #F9F871);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* General styles for all  elements */
+ {
+    padding-top: 20px; /* Adjust the padding from the header */
+    padding-bottom: 20px; /* Padding from elements below */
+    color: white; /* Text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+}
+
+/* Specific styles for .main-title class */
+.main-title {
+    font-size: 70px;
+    color: white;
+    padding-top: 30px; /* Padding from the header */
+    padding-right: 150px;
+}
+
+/* Content wrapper to push footer to the bottom */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensure content is centered */
+}
+
+.container {
+    flex: 1;
+}
+label {
+    font-size: 16px;
+    color: #3D3A4D; /* Set all labels to white */
+}
+
+/* Transparent blurred box */
+.description-box {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.description-text {
+    margin: 0;
+    font-size: 1.2rem; /* Increase font size */
+    font-family: 'Roboto Slab', sans-serif; /* Use a stylish font */
+}
+
+/* Navbar styles */
+.navbar-custom {
+    background-color: #0081CF;
+    color: white;
+}
+
+.navbar-custom .navbar-nav .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-custom .nav-link.active {
+    color: white;
+}
+
+.navbar-custom .nav-link.active:hover {
+    color: #00C9A7;
+}
+
+.navbar-custom .dropdown-menu {
+    background-color: #0081CF;
+    border: none;
+}
+
+.navbar-custom .dropdown-menu .dropdown-item:hover {
+    background-color: #00C9A7;
+    color: white;
+}
+
+.btn-logout {
+    background-color: #FF8066;
+    color: white;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.btn-logout:hover {
+    background-color: #ff5c4a;
+    color: white;
+}
+
+/* Login page styles */
+body.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 10px;
+}
+
+body.login-page .wrapper {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+body.login-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+body.login-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+body.login-page .input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 15px 0;
+}
+
+body.login-page .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+body.login-page .input-field input {
+    width: 100%;
+    height: 40px;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    font-size: 16px;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+
+body.login-page .input-field input:focus ~ label,
+body.login-page .input-field input:valid ~ label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+body.login-page .input-field input::placeholder {
+    color: #fff !important;
+}
+
+body.login-page .forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #fff;
+}
+
+body.login-page #remember {
+    accent-color: #fff;
+}
+
+body.login-page .forget label {
+    display: flex;
+    align-items: center;
+}
+
+body.login-page .forget label p {
+    margin-left: 8px;
+}
+
+body.login-page .wrapper a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+body.login-page .wrapper a:hover {
+    text-decoration: underline;
+}
+
+body.login-page button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+body.login-page button:hover {
+    color: #fff;
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.login-page .register {
+    display: none;
+}
+
+/* Footer styles */
+.footer {
+    background-color: transparent !important;
+    padding: 10px 20px;
+    box-shadow: none !important;
+    color: white;
+}
+
+.footer img {
+    max-height: 50px;
+}
+
+/* Table Styles */
+.table-wrapper {
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before {
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child {
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Button Styles */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+ul li a.supprimer {
+    background-color: #EC6060;
+    color: white; /* Text color stays white */
+    display: inline-block; /* Prevents line breaks and ensures block styling */
+    text-decoration: none; /* Ensures no underline is added */
+}
+
+ul li a.supprimer:hover {
+    background-color: #FF3F3F;
+    color: white; /* Ensure text color stays white */
+}
+
+ul li a.modifier {
+    background-color: #00c9b7;
+    color: white; /* Text color stays white */
+    display: inline-block; /* Prevents line breaks and ensures block styling */
+    text-decoration: none; /* Ensures no underline is added */
+}
+
+ul li a.modifier:hover {
+    background-color: #FFD300;
+    color: white; /* Ensure text color stays white */
+}
+
+ul li a.associer {
+    background-color: #2A5DAA;
+    color: white; /* Text color stays white */
+    display: inline-block; /* Prevents line breaks and ensures block styling */
+    text-decoration: none; /* Ensures no underline is added */
+}
+
+ul li a.associer:hover {
+    background-color: #137500;
+    color: white; /* Ensure text color stays white */
+}
+
+
+/* Additional styles for padding and title */
+.content-container {
+    padding-top: 20px; /* Adjust this value to increase/decrease the padding */
+    color: white; /* Change the title color to white */
+}
+
+.ensah-image {
+    max-height: 300px;
+    margin-right: 180px;
+}
+
+.btn-custom {
+    background-color: #00A4DE; /* Custom color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure buttons display correctly */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.btn-custom:hover {
+    background-color: #0081CF; /* Darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+/* Primary button styles */
+.btn-primary {
+    background-color: #00A4DE; /* Custom color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure buttons display correctly */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #0081CF; /* Darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Reset button styles */
+.btn-secondary {
+    background-color: #FF445C; /* Custom color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure buttons display correctly */
+    margin-right: 10px; /* Space between buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.btn-secondary:hover {
+    background-color: #FF2233; /* Darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+/* General styles for labels and form controls */
+label {
+    font-size: 16px;
+}
+
+.form-control {
+    width: 800px;
+}
+.surveillance-input {
+	margin-top : 20px;
+	margin-left : 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+
+.surveillance-label {
+	margin-bottom:20px;
+    color: #3E4756;
+     font-weight: bold;
+}
+
+/* Styles for radio buttons */
+:root {
+    --primary:#006877;
+    --secondary: #FFEECB;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.group h2 {
+    margin-bottom: 10px;
+}
+
+/* Hide inputs */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Styles */
+.group label {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.25, 0.25, 0.5, 1.9);
+}
+
+.group label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent;
+    border: 2px solid;
+    border-radius: 0.25rem;
+    z-index: -1;
+    transition: all 0.25s cubic-bezier(0.25, 0.25, 0.5, 1.9);
+}
+
+input[type="radio"] + .group label {
+    border-radius: 2rem;
+}
+
+/* Checked */
+input[type="radio"]:checked + label {
+    padding-left: 1em;
+    color: var(--secondary);
+}
+
+input[type="radio"]:checked + label::before {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border: 0;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.about {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  font-size : 80px;
+}
+
+.aboutdesc {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size : 50px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.card-wrapper {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 450px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  overflow: visible; /* Allow overflow for image */
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+  background: transparent; /* Make card background transparent */
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: .5s;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Smooth transition for transform */
+}
+
+.card:hover .card-image img {
+  transform: translateY(-80px); /* Move image up on hover */
+}
+
+.social-icons {
+  position: absolute;
+  top: 70%; /* Adjusted to position closer to text bar */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li a {
+  position: relative;
+  display: block;
+  width: 40px; /* Reduce the width */
+  height: 40px; /* Reduce the height */
+  line-height: 40px; /* Center icon vertically */
+  text-align: center;
+  background: #fff;
+  font-size: 20px; /* Adjust font size */
+  color: #333;
+  font-weight: bold;
+  margin: 0 6px;
+  transition: .4s;
+  transform: translateY(200px);
+  opacity: 0;
+}
+
+.card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.social-icons li a:hover {
+  background: #000;
+  transition: .2s;
+}
+
+.social-icons li a .fab, .social-icons li a .fas {
+  transition: .8s;
+}
+
+.social-icons li a .fab:hover, .social-icons li a .fas:hover {
+  transform: rotateY(360deg);
+  color: #fff;
+}
+
+.card:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+
+.card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+
+.card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.details h2 {
+  margin: 30px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.details .job-title {
+  font-size: 30px;
+  line-height: 2.5rem;
+  color: #333;
+  font-weight: 300;
+  font-family: 'Anton SC';
+}
+
+
+
+.card:hover .profile-img--two {
+  transform: rotateY(180deg);
+}
+
+.section-title {
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+.icon-wrapper {
+    text-align: center;
+    margin: 20px;
+}
+.icon-wrapper img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.icon-wrapper p {
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+.custom-border-color {
+    border-color: #45D810; /* Desired color for Spring Boot icon */
+}
